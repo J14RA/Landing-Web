@@ -10,20 +10,24 @@
 
 <body>
     <header class="container header">
-        <a href="#default" class="logo">AIKE</a>
-        <div class="header-left">
-            <a href="#category">Category</a>
-            <a href="#promo">Promo</a>
-            <a href="#interior">Ineterior Design</a>
-            <a href="#recomendation">Product Recemondation</a>
-        </div>
-        <div class="header-right">
+        <nav class="navbar">
+            <a href="#" class="logo">AIKE</a>
+            <ul class="nav-links">
+                <li><a href="#category">Category</a></li>
+                <li><a href="#promo">Promo</a></li>
+                <li><a href="#interior">Interior Design</a></li>
+                <li><a href="#recomendation">Product Recommendation</a></li>
+            </ul>
+        </nav>
+        <div class="search-bar">
             <i class="fa-solid fa-magnifying-glass icon"></i>
-            <input class="input-field" type="text" placeholder="    Product Search">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <i class="fa-solid fa-heart"></i>
-            <i class="fa-solid fa-user"></i>
+            <input type="text" placeholder="Product Search" class="input-field">
         </div>
+        <ul class="user-actions">
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-heart"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
     </header>
 
     <section class="container">
@@ -41,8 +45,19 @@
                     <button class="btn-icon"><i class="fa-solid fa-clock"> </i> Always on-time</i></button>
                 </div>
                 <div class="inner-2"><img src="img/Kursi.jpg " alt=""></div>
-                <div class="inner-3"><img src="img/Kursi.jpg " alt=""></div>
-                <div class="inner-4"><img src="img/Kursi.jpg " alt=""></div>
+                <div class="inner-3">
+                    <img src="img/Kursi.jpg " alt="">
+                    <div class="slogan">
+                        <p>Modern & stylish Furniture</p>
+                    </div>
+                </div>
+                <div class="inner-4">
+                    <img src="img/Kursi.jpg " alt="">
+                    <div class="job-desk">
+                        <p class="text-nm">Name Perosn</p>
+                        <p>Job descrption</p>
+                    </div>
+                </div>
                 <div class="inner-5"><img src="img/Kursi.jpg " alt=""></div>
             </div>
         </div>
