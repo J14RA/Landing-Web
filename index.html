@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/a44b233dfa.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <title>AIKE - Ecommerce Landing Page</title>
 </head>
 
@@ -86,27 +88,60 @@
             <p class="text-xl">Furniture For Sale</p>
         </div>
 
-        <div class="products">
-            <!-- Product 1 -->
-            <div class="product-card">
-                <img src="img/living-room.jpg" alt="KALLAX">
-                <div class="product-name">KALLAX</div>
-                <div class="product-price">$25.00</div>
+        <div class="swiper-container swiper1">
+
+            <div class="products swiper-wrapper">
+                <!-- Product 1 -->
+                <div class="product-card swiper-slide">
+                    <img src="img/living-room.jpg" alt="KALLAX">
+                    <div class="product-name">KALLAX</div>
+                    <div class="product-price">$25.00</div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card swiper-slide">
+                    <img src="img/home-office.jpg" alt="MAMMUT">
+                    <div class="product-name">MAMMUT</div>
+                    <div class="product-price">$12.00</div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card swiper-slide">
+                    <img src="img/Kursi.jpg" alt="ARKELSTORP">
+                    <div class="product-name">ARKELSTORP</div>
+                    <div class="product-price">$65.00</div>
+                </div>
+
+                <!-- Product 1 -->
+                <div class="product-card swiper-slide">
+                    <img src="img/living-room.jpg" alt="KALLAX">
+                    <div class="product-name">KALLAX</div>
+                    <div class="product-price">$25.00</div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card swiper-slide">
+                    <img src="img/home-office.jpg" alt="MAMMUT">
+                    <div class="product-name">MAMMUT</div>
+                    <div class="product-price">$12.00</div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card swiper-slide">
+                    <img src="img/Kursi.jpg" alt="ARKELSTORP">
+                    <div class="product-name">ARKELSTORP</div>
+                    <div class="product-price">$65.00</div>
+                </div>
+            </div>
+            <div class="swiper-button-prev swiper-button-prev1">
+                <img src="img/svg/arrow-narrow-circle-broken-left-svgrepo-com.svg" alt="Previous">
             </div>
 
-            <!-- Product 2 -->
-            <div class="product-card">
-                <img src="img/home-office.jpg" alt="MAMMUT">
-                <div class="product-name">MAMMUT</div>
-                <div class="product-price">$12.00</div>
+            <!-- Custom Next Button with SVG Image -->
+            <div class="swiper-button-next swiper-button-next1">
+                <img src="img/svg/arrow-narrow-circle-broken-down-svgrepo-com.svg" alt="Next">
             </div>
-
-            <!-- Product 3 -->
-            <div class="product-card">
-                <img src="img/Kursi.jpg" alt="ARKELSTORP">
-                <div class="product-name">ARKELSTORP</div>
-                <div class="product-price">$65.00</div>
-            </div>
+            <div class=" swiper-pagination swiper-pagination1"></div>
         </div>
     </section>
 
@@ -116,30 +151,47 @@
             <p class="text-xl">Design your perfect home</p>
         </div>
 
-        <div class="category">
-            <!-- Category 1 -->
-            <div class="category-card">
-                <img src="img/living-room.jpg" alt="KALLAX">
-                <div class="category-name">Lifing Room</div>
+        <div class="swiper-container swiper2">
+            <div class="category swiper-wrapper">
+                <!-- Category 1 -->
+                <div class="category-card swiper-slide">
+                    <img src="img/living-room.jpg" alt="KALLAX">
+                    <div class="category-name">Lifing Room</div>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="category-card swiper-slide">
+                    <img src="img/home-office.jpg" alt="MAMMUT">
+                    <div class="category-name">Dining Room</div>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="category-card swiper-slide">
+                    <img src="img/Kursi.jpg" alt="ARKELSTORP">
+                    <div class="category-name">Home Office</div>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="category-card swiper-slide">
+                    <img src="img/Kursi.jpg" alt="ARKELSTORP">
+                    <div class="category-name">Bedroom</div>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="category-card swiper-slide">
+                    <img src="img/Kursi.jpg" alt="ARKELSTORP">
+                    <div class="category-name">Outoor</div>
+                </div>
+            </div>
+            <div class="swiper-button-prev swiper-button-prev2">
+                <img src="img/svg/arrow-narrow-circle-broken-left-svgrepo-com.svg" alt="Previous">
             </div>
 
-            <!-- Category 2 -->
-            <div class="category-card">
-                <img src="img/home-office.jpg" alt="MAMMUT">
-                <div class="category-name">Bedroom</div>
+            <!-- Custom Next Button with SVG Image -->
+            <div class="swiper-button-next swiper-button-next2">
+                <img src="img/svg/arrow-narrow-circle-broken-down-svgrepo-com.svg" alt="Next">
             </div>
-
-            <!-- Category 3 -->
-            <div class="category-card">
-                <img src="img/Kursi.jpg" alt="ARKELSTORP">
-                <div class="category-name">Dining Room</div>
-            </div>
-
-            <!-- Category 4 -->
-            <div class="category-card">
-                <img src="img/Kursi.jpg" alt="ARKELSTORP">
-                <div class="category-name">Home Office</div>
-            </div>
+            <div class="swiper-pagination swiper-pagination2"></div>
         </div>
     </section>
 
@@ -151,9 +203,10 @@
                 <img src="img/living-romm-2.jpg" alt="">
             </div>
             <div class="bottom-context">
-                <h1>Our Ambtion</h1>
+                <h2>Our Ambtion</h2>
                 <p class="text-lg">Pionnering innovation and exellence in furniture</p>
-                <p class="text-nm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia modi voluptatum,
+                <p class="text-nm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia modi
+                    voluptatum,
                     reprehenderit sit
                     deleniti corporis provident quia nemo veritatis quasi repudiandae corrupti excepturi earum enim
                     rerum eos amet voluptatibus eum!</p>
@@ -165,9 +218,9 @@
     <section class="container">
         <div class="colection">
             <div class="headline-colection">
-                <h1 class="text-xl">We meticulously curate our <mark>product selections</mark> to ensure you receive
+                <h2 class="text-xl">We meticulously curate our <mark>product selections</mark> to ensure you receive
                     only the
-                    best.</h1>
+                    best.</h2>
             </div>
         </div>
 
@@ -197,9 +250,11 @@
             <ul>
                 <li class="text-nm"><a href="#">Category</a></li>
                 <li><a href="#">Living Room</a></li>
+                <li><a href="#">Dining Room</a></li>
                 <li><a href="#">Home Office</a></li>
                 <li><a href="#">Bedroom</a></li>
                 <li><a href="#">Outoor</a></li>
+
             </ul>
             <ul>
                 <li class="text-nm"><a href="#">Join our Newslatter</a></li>
@@ -215,6 +270,7 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 :root {
     --primary-color: #f9f9fb;
     --dark-color: #000;
-
+    /* --swiper-navigation-color: transparent; */
 }
 
 * {
@@ -265,22 +265,15 @@ mark {
 
 .items-sold img {
     width: 40px;
-    /* Adjust size as needed */
     height: 40px;
-    /* Adjust size as needed */
     border-radius: 50%;
-    /* Makes the images circular */
     border: 2px solid white;
-    /* Adds a border to create separation */
     margin-left: -10px;
-    /* Overlaps the images */
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-    /* Optional: Add some shadow for depth */
 }
 
 .items-sold img:first-child {
     margin-left: 0;
-    /* Removes overlap margin for the first image */
 }
 
 .items-sold-count {
@@ -294,13 +287,62 @@ mark {
     font-size: small;
 }
 
+/* Swiper */
+
+.swiper-container {
+    width: 100%;
+    height: 60%;
+    position: relative;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+    top: 50%;
+    ;
+}
+
+
+.swiper-button-prev img,
+.swiper-button-next img {
+    width: 3rem;
+    height: auto;
+    object-fit: contain;
+    position: absolute;
+}
+
+.swiper-pagination-bullet {
+    background-color: #ccc;
+    /* Default color */
+    width: 12px;
+    height: 12px;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #000;
+    /* Color when active */
+}
+
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    display: none;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    display: none;
+}
+
 /* Product */
 
-.products {
+/* .products {
     display: flex;
     justify-content: center;
-    gap: 40px;
-}
+    gap: 10px;
+} */
 
 .product-title {
     padding: 4rem;
@@ -311,40 +353,44 @@ mark {
 .product-card {
     position: relative;
     width: 30rem;
+    padding-bottom: 2rem;
 }
 
 .product-card img {
     width: 100%;
-    border-radius: 10px;
 }
 
 .product-name {
     position: absolute;
     bottom: 20px;
     left: 20px;
-    background-color: gray;
     padding: 5px 10px;
     font-weight: lighter;
-    border-radius: 5px;
+    padding-bottom: 2rem;
 }
 
 .product-price {
     position: absolute;
     right: 20px;
     bottom: 20px;
-    background-color: gray;
     padding: 5px 10px;
     font-weight: lighter;
-    border-radius: 5px;
+    padding-bottom: 2rem;
 }
 
 /* Category */
+.fourslide {
+    height: 40%;
+}
 
-.category {
+/* .category {
     display: flex;
     justify-content: center;
     gap: 40px;
-}
+} */
+
+
+
 
 .category-title {
     padding-top: 10rem;
