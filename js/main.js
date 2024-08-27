@@ -1,15 +1,23 @@
-var swiper1 = new Swiper('.swiper1', {
-    loop: true, // Enable looping through slides
+function toggleDropdown() {
+    const navbar = document.getElementById('navbar');
+    const searchBar = document.getElementById('search-bar');
+    const userActions = document.getElementById('user-actions');
+    navbar.classList.toggle('active');
+    searchBar.classList.toggle('active');
+    userActions.classList.toggle('active');
+}
+
+const swiper1 = new Swiper('.swiper1', {
+    loop: true,
     navigation: {
-        nextEl: '.swiper-button-next1',
-        prevEl: '.swiper-button-prev1',
+        nextEl: '.swiper1 .swiper-button-next',
+        prevEl: '.swiper1 .swiper-button-prev',
     },
     pagination: {
-        el: '.swiper-pagination1', // Pagination element
-        clickable: true, // Make pagination bullets clickable
+        el: '.swiper1 .swiper-pagination',
+        clickable: true,
     },
-    slidesPerView: 3, // Adjust based on the number of slides to show at once
-    spaceBetween: 20, // Space between slides
+    spaceBetween: 20,
     breakpoints: {
         640: {
             slidesPerView: 1,
@@ -24,21 +32,21 @@ var swiper1 = new Swiper('.swiper1', {
             spaceBetween: 20,
         },
     }
+
 });
 
-
-var swiper2 = new Swiper('.swiper2', {
-    loop: true, // Enable looping through slides
+// Initialize the second Swiper instance
+const swiper2 = new Swiper('.swiper2', {
+    loop: true,
     navigation: {
-        nextEl: '.swiper-button-next2',
-        prevEl: '.swiper-button-prev2',
+        nextEl: '.swiper2 .swiper-button-next',
+        prevEl: '.swiper2 .swiper-button-prev',
     },
     pagination: {
-        el: '.swiper-pagination2', // Pagination element
-        clickable: true, // Make pagination bullets clickable
+        el: '.swiper2 .swiper-pagination',
+        clickable: true,
     },
-    slidesPerView: 4, // Adjust based on the number of slides to show at once
-    spaceBetween: 20, // Space between slides
+    spaceBetween: 10,
     breakpoints: {
         640: {
             slidesPerView: 1,
@@ -49,8 +57,9 @@ var swiper2 = new Swiper('.swiper2', {
             spaceBetween: 15,
         },
         1024: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 20,
         },
     }
 });
+

@@ -5,15 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
     <title>AIKE - Ecommerce Landing Page</title>
 </head>
 
 <body>
-    <header class="container header">
-        <nav class="navbar">
-            <a href="#" class="logo">AIKE</a>
+    <header class="header">
+        <a href="#" class="logo">AIKE</a>
+        <button class="toggle-btn" onclick="toggleDropdown()">
+            <img src="/img/svg/nav-icon-svgrepo-com.svg" alt="">
+        </button>
+        <nav class="navbar" id="navbar">
             <ul class="nav-links">
                 <li><a href="#category">Category</a></li>
                 <li><a href="#promo">Promo</a></li>
@@ -21,16 +22,17 @@
                 <li><a href="#recomendation">Product Recommendation</a></li>
             </ul>
         </nav>
-        <div class="search-bar">
-            <img src="img/svg/magnifying-glass-backup-svgrepo-com.svg" alt=""></i>
+        <div class="search-bar" id="search-bar">
+            <img src="img/svg/magnifying-glass-backup-svgrepo-com.svg" alt="">
             <input type="text" placeholder="Product Search" class="input-field">
         </div>
-        <ul class="user-actions">
+        <ul class="user-actions" id="user-actions">
             <li><a href="#"><img src="img/svg/cart-shopping-svgrepo-com.svg" alt=""></a></li>
             <li><a href="#"><img src="img/svg/heart-svgrepo-com.svg" alt=""></a></li>
-            <li><a href="#"><img src="img/svg/person-svgrepo-com.svg" alt=""></i></a></li>
+            <li><a href="#"><img src="img/svg/person-svgrepo-com.svg" alt=""></a></li>
         </ul>
     </header>
+
 
     <section class="container">
         <div class="home-section">
@@ -88,7 +90,7 @@
             <p class="text-xl">Furniture For Sale</p>
         </div>
 
-        <div class="swiper-container swiper1">
+        <div class="swiper swiper1">
 
             <div class="products swiper-wrapper">
                 <!-- Product 1 -->
@@ -133,15 +135,15 @@
                     <div class="product-price">$65.00</div>
                 </div>
             </div>
-            <div class="swiper-button-prev swiper-button-prev1">
+            <div class="swiper-button-prev">
                 <img src="img/svg/arrow-narrow-circle-broken-left-svgrepo-com.svg" alt="Previous">
             </div>
 
             <!-- Custom Next Button with SVG Image -->
-            <div class="swiper-button-next swiper-button-next1">
+            <div class="swiper-button-next">
                 <img src="img/svg/arrow-narrow-circle-broken-down-svgrepo-com.svg" alt="Next">
             </div>
-            <div class=" swiper-pagination swiper-pagination1"></div>
+            <div class=" swiper-pagination"></div>
         </div>
     </section>
 
@@ -151,7 +153,7 @@
             <p class="text-xl">Design your perfect home</p>
         </div>
 
-        <div class="swiper-container swiper2">
+        <div class="swiper swiper2">
             <div class="category swiper-wrapper">
                 <!-- Category 1 -->
                 <div class="category-card swiper-slide">
@@ -183,16 +185,17 @@
                     <div class="category-name">Outoor</div>
                 </div>
             </div>
-            <div class="swiper-button-prev swiper-button-prev2">
+            <div class="swiper-button-prev">
                 <img src="img/svg/arrow-narrow-circle-broken-left-svgrepo-com.svg" alt="Previous">
             </div>
 
             <!-- Custom Next Button with SVG Image -->
-            <div class="swiper-button-next swiper-button-next2">
+            <div class="swiper-button-next">
                 <img src="img/svg/arrow-narrow-circle-broken-down-svgrepo-com.svg" alt="Next">
             </div>
-            <div class="swiper-pagination swiper-pagination2"></div>
+            <div class="swiper-pagination"></div>
         </div>
+
     </section>
 
     <!-- Bottom-section -->
@@ -269,6 +272,7 @@
             <a href="#promo">Privacy policy</a>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 
 </body>
