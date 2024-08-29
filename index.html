@@ -228,24 +228,29 @@
         </div>
 
         <div class="images-colection">
-            <img src="img/home-office.jpg" alt="Product 1">
-            <img src="img/Kursi.jpg" alt="Product 2">
-            <img src="img/living-romm-2.jpg" alt="Product 3">
-            <img src="img/living-room.jpg" alt="Product 4">
-            <img src="img/picture-frame-by-velvet-armchair.jpg" alt="Product 5">
-            <img src="img/vertical-shot-wooden-chair-white.jpg" alt="Product 6">
+            <div class="colection-left"><img src="img/home-office.jpg" alt="Product 1">
+                <img src="img/Kursi.jpg" alt="Product 2">
+                <img src="img/living-romm-2.jpg" alt="Product 3">
+            </div>
+            <div class="colection-right">
+                <img src="img/living-room.jpg" alt="Product 4">
+                <img src="img/picture-frame-by-velvet-armchair.jpg" alt="Product 5">
+                <img src="img/vertical-shot-wooden-chair-white.jpg" alt="Product 6">
+            </div>
         </div>
     </section>
 
 
-    <footer class=" container footer">
+    <footer class="container footer">
         <div class="footer-row">
             <div class="footer-col">
                 <h4>AIKE</h4>
             </div>
 
             <div class="footer-col">
-                <h4>Company</h4>
+                <button class="dropdown-btn">
+                    <h4>Company</h4>
+                </button>
                 <ul class="links">
                     <li><a href="#">About</a></li>
                     <li><a href="#">Shop</a></li>
@@ -255,7 +260,9 @@
             </div>
 
             <div class="footer-col">
-                <h4>Category</h4>
+                <button class="dropdown-btn">
+                    <h4>Category</h4>
+                </button>
                 <ul class="links">
                     <li><a href="#">Living Room</a></li>
                     <li><a href="#">Dining Room</a></li>
@@ -270,12 +277,15 @@
                 <form action="#">
                     <div class="input-container">
                         <input type="text" placeholder="Your email" required>
-                        <button type="submit"><img src="img/svg/arrow-sm-right-svgrepo-com.svg" alt=""></button>
+                        <button type="submit">
+                            <img src="img/svg/arrow-sm-right-svgrepo-com.svg" alt="">
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>

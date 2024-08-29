@@ -7,6 +7,50 @@ function toggleDropdown() {
     userActions.classList.toggle('active');
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+
+    // Function to control the display of the links based on window width
+    function updateLinksDisplay() {
+        var links = document.querySelectorAll(".footer-col .links");
+        var windowWidth = window.innerWidth;
+
+        links.forEach(function (link) {
+            if (windowWidth > 600) {
+                link.style.display = "block"; // Show links if the viewport width is above 600px
+            } else {
+                link.style.display = "none"; // Hide links if the viewport width is 600px or below
+            }
+        });
+    }
+
+    // Event listener for window resize to dynamically update the display of links
+    window.addEventListener("resize", updateLinksDisplay);
+
+    // Initial call to set display based on current window width
+    updateLinksDisplay();
+
+    // Event listeners for dropdown button clicks
+    for (var i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            var dropdownContent = this.nextElementSibling;
+
+            // Toggle the display of links only if the window width is above 600px
+            if (window.innerWidth > 600) {
+                this.classList.toggle("active");
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            }
+        });
+    }
+});
+
+
+
+
 const swiper1 = new Swiper('.swiper1', {
     loop: true,
     navigation: {

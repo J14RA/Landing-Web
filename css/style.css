@@ -51,11 +51,22 @@ mark {
 
 /* container */
 .container {
-    max-width: 95%;
+    max-width: 90%;
     margin: auto;
     overflow: hidden;
     padding: 1rem;
     margin-bottom: 5rem;
+}
+
+@media (max-width: 600px) {
+    .container {
+        max-width: 95%;
+        margin: auto;
+        overflow: hidden;
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
 }
 
 /* Header */
@@ -164,7 +175,6 @@ mark {
     .search-bar,
     .user-actions {
         width: 100%;
-        background: rgb(116, 100, 100, 0.2);
         display: none;
         flex-direction: column;
         align-items: flex-start;
@@ -412,6 +422,10 @@ mark {
 
 /* Media Query for Single Column Layout */
 @media (max-width: 768px) {
+    .home-section {
+        align-items: center;
+    }
+
     .home-right {
         grid-template-columns: 1fr;
     }
@@ -436,6 +450,8 @@ mark {
     }
 
     .home-left {
+        padding: 0;
+        margin: 0;
         width: 100%;
         /* Take up full width */
     }
@@ -443,6 +459,10 @@ mark {
     .home-actions {
         align-items: flex-start;
         flex-direction: column;
+    }
+
+    .home-right {
+        padding: 10px;
     }
 
 }
@@ -519,7 +539,7 @@ mark {
 } */
 
 .product-title {
-    padding: 4rem;
+    padding: 1rem;
     text-align: center;
     align-items: center;
 }
@@ -573,7 +593,7 @@ mark {
 }
 
 .category-title {
-    padding-top: 10rem;
+    padding-top: 2rem;
     padding-bottom: 4rem;
 }
 
@@ -621,33 +641,52 @@ mark {
 
 /* Colection-section */
 
-.headline-colection h1 {
+.headline-colection h2 {
     padding: 2rem;
     text-align: left;
-    padding-right: 30rem;
+    margin-right: 40rem;
 }
 
 .images-colection {
-    align-items: start;
     display: flex;
-    justify-content: space-around;
-    gap: 1rem;
+    justify-content: center;
+    gap: 0;
 }
 
 .images-colection img {
-    width: 150px;
+    width: 15rem;
     height: auto;
     object-fit: contain;
+    padding: 1rem;
 }
 
+
+@media (max-width: 600px) {
+
+    .colection-left {
+        flex: 1;
+    }
+
+    .headline-colection h2 {
+        padding: unset;
+        text-align: left;
+        margin-right: unset;
+    }
+}
 
 
 
 /* Footer */
-
+/* General styles for the footer */
+/* General footer styles */
 .footer {
-    max-width: 1280px;
     width: 95%;
+    max-width: 1200px;
+    /* Limits the max width for larger screens */
+    margin: 0 auto;
+    /* Centers the footer */
+    box-sizing: border-box;
+    /* Ensures padding is included in width */
 }
 
 .footer .footer-row {
@@ -666,6 +705,8 @@ mark {
 
 .footer-col .links {
     margin-top: 20px;
+    display: none;
+    /* Hidden by default */
 }
 
 .footer-col .links li {
@@ -703,12 +744,13 @@ mark {
     height: 40px;
     width: 100%;
     padding-right: 50px;
-    /* Adjust to make space for the button */
     padding-left: 10px;
     border: none;
     border-bottom: groove;
     background: var(--primary-color);
     outline: none;
+    box-sizing: border-box;
+    /* Consistent box-sizing */
 }
 
 .footer-wrapper input::placeholder {
@@ -736,24 +778,43 @@ mark {
     justify-content: space-between;
 }
 
+.footer .footer-col .dropdown-btn {
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+}
 
+/* Styles for viewports 600px and below */
 @media (max-width: 600px) {
     .footer {
         position: relative;
-        bottom: 0;
-        left: 0;
-        transform: none;
         width: 100%;
         border-radius: 0;
     }
 
     .footer .footer-row {
+        flex-direction: column;
         padding: 20px;
         gap: 1rem;
     }
 
     .footer-col form {
         display: block;
+    }
+}
+
+/* Styles for viewports above 600px */
+@media (min-width: 601px) {
+    .footer .footer-col .links {
+        display: block;
+        /* Display links only on larger screens */
     }
 }
 
@@ -793,6 +854,14 @@ mark {
 .text-dark {
     color: var(--dark-color);
     font-weight: lighter;
+}
+
+@media (max-width: 600px) {
+    .text-xl {
+        line-height: 1;
+        font-size: 2.5rem;
+        margin-bottom: 0.3rem;
+    }
 }
 
 /* Button */
