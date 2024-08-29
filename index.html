@@ -9,9 +9,11 @@
 </head>
 
 <body>
+    <!-- HTML -->
     <header class="header">
         <a href="#" class="logo">AIKE</a>
-        <button class="toggle-btn" onclick="toggleDropdown()">
+        <button class="toggle-btn" onclick="toggleDropdown()" aria-expanded="false"
+            aria-controls="navbar search-bar user-actions">
             <img src="img/svg/nav-icon-svgrepo-com.svg" alt="Navigation Toggle">
         </button>
         <nav class="navbar" id="navbar">
@@ -32,6 +34,7 @@
             <li><a href="#"><img src="img/svg/person-svgrepo-com.svg" alt="User"></a></li>
         </ul>
     </header>
+
 
     <section class="container">
         <div class="home-section">
@@ -283,6 +286,17 @@
                     </div>
                 </form>
             </div>
+        </div>
+        <div class="copyright text-nm">
+            <p>
+                Copyright © 2024 AIKE. All rights reserved.
+            </p>
+            <p>
+                Terms of Condition.
+            </p>
+            <p>
+                Privacy Policy.
+            </p>
         </div>
     </footer>
 

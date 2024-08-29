@@ -69,7 +69,7 @@ mark {
 
 }
 
-/* Header */
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -103,6 +103,7 @@ mark {
 .header a.logo {
     font-size: 2rem;
     font-weight: bold;
+    outline: none;
 }
 
 .search-bar {
@@ -113,28 +114,22 @@ mark {
 
 .input-field {
     outline: none;
-    padding-left: 30px;
-    flex: 1;
-    padding: 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    /* Align padding to maintain text positioning */
     border: none;
-    border-bottom: groove;
-    border-width: 2px;
+    border-bottom: groove 2px;
     font-size: 1rem;
-    text-indent: 2rem;
     background: var(--primary-color);
 }
 
 .search-bar img {
-    height: fit-content;
-    width: 25px;
+    padding: auto;
+    width: 30px;
+    height: auto;
     position: absolute;
-    left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 20px;
-    margin-right: auto;
     z-index: 1;
-    fill: gray;
 }
 
 .user-actions {
@@ -149,6 +144,10 @@ mark {
     color: gray;
 }
 
+.toggle-btn {
+    display: none;
+}
+
 @keyframes slideDown {
     0% {
         transform: translateY(-100%);
@@ -161,62 +160,46 @@ mark {
     }
 }
 
-/* Media query for phones */
 @media (max-width: 600px) {
     .header {
-        background: rgb(116, 100, 100, 0.2);
+        background: rgba(116, 100, 100, 0.2);
         flex-direction: column;
         align-items: flex-start;
         animation: slideDown 0.5s ease-in-out forwards;
-
     }
 
     .navbar,
-    .search-bar,
-    .user-actions {
+    .search-bar {
         width: 100%;
         display: none;
         flex-direction: column;
         align-items: flex-start;
         padding: 10px;
         animation: slideDown 0.5s ease-in-out forwards;
+    }
 
+    .user-actions {
+        width: 100%;
+        display: none;
+        flex-direction: row;
+        align-items: center;
+        padding: 10px;
+        animation: slideDown 0.5s ease-in-out forwards;
+        justify-content: space-around;
     }
 
     .navbar.active,
-    .search-bar.active {
+    .search-bar.active,
+    .user-actions.active {
         display: flex;
     }
 
     .navbar.active .nav-links {
-        text-align: justify;
-        align-items: flex-start;
         display: flex;
         flex-direction: column;
         gap: 2rem;
-        font-weight: 900;
-        padding: unset;
-
     }
 
-    .user-actions.active {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-}
-
-.logo {
-    outline: none;
-    margin: 10px;
-}
-
-/* Toggle button for dropdown */
-.toggle-btn {
-    display: none;
-}
-
-@media (max-width: 600px) {
     .toggle-btn {
         display: block;
         position: absolute;
@@ -224,14 +207,12 @@ mark {
         right: 10px;
         background: none;
         border: none;
-        color: white;
         font-size: 24px;
     }
 
     .toggle-btn img {
         width: 40px;
-        margin: 15px 20px;
-        color: gray;
+        margin: 5px 20px;
     }
 }
 
@@ -654,7 +635,7 @@ mark {
 }
 
 .images-colection img {
-    width: 15rem;
+    width: 13rem;
     height: auto;
     object-fit: contain;
     padding: 1rem;
@@ -677,7 +658,6 @@ mark {
 
 
 /* Footer */
-/* General styles for the footer */
 /* General footer styles */
 .footer {
     width: 95%;
@@ -791,6 +771,11 @@ mark {
     outline: none;
 }
 
+.footer .copyright {
+    display: flex;
+    justify-content: space-between;
+}
+
 /* Styles for viewports 600px and below */
 @media (max-width: 600px) {
     .footer {
@@ -808,6 +793,11 @@ mark {
     .footer-col form {
         display: block;
     }
+
+    .footer .copyright {
+        flex-direction: column;
+        font-size: x-small;
+    }
 }
 
 /* Styles for viewports above 600px */
@@ -817,6 +807,7 @@ mark {
         /* Display links only on larger screens */
     }
 }
+
 
 /* Text Styles */
 .text-xl {

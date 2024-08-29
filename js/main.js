@@ -1,11 +1,18 @@
+// JavaScript
 function toggleDropdown() {
     const navbar = document.getElementById('navbar');
     const searchBar = document.getElementById('search-bar');
     const userActions = document.getElementById('user-actions');
-    navbar.classList.toggle('active');
+    const toggleBtn = document.querySelector('.toggle-btn');
+
+    const isActive = navbar.classList.toggle('active');
     searchBar.classList.toggle('active');
     userActions.classList.toggle('active');
+
+    // Update aria-expanded attribute
+    toggleBtn.setAttribute('aria-expanded', isActive);
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
     var dropdown = document.getElementsByClassName("dropdown-btn");
@@ -36,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
             var dropdownContent = this.nextElementSibling;
 
             // Toggle the display of links only if the window width is above 600px
-            if (window.innerWidth > 600) {
+            if (window.innerWidth < 600) {
                 this.classList.toggle("active");
                 if (dropdownContent.style.display === "block") {
                     dropdownContent.style.display = "none";
