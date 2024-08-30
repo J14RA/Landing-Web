@@ -9,14 +9,10 @@
 </head>
 
 <body>
-    <!-- HTML -->
-    <header class="header">
+    <!-- Desktop Header -->
+    <header class="header header-desktop">
         <a href="#" class="logo">AIKE</a>
-        <button class="toggle-btn" onclick="toggleDropdown()" aria-expanded="false"
-            aria-controls="navbar search-bar user-actions">
-            <img src="img/svg/nav-icon-svgrepo-com.svg" alt="Navigation Toggle">
-        </button>
-        <nav class="navbar" id="navbar">
+        <nav class="navbar">
             <ul class="nav-links">
                 <li><a href="#category">Category</a></li>
                 <li><a href="#promo">Promo</a></li>
@@ -24,16 +20,48 @@
                 <li><a href="#recommendation">Product Recommendation</a></li>
             </ul>
         </nav>
-        <div class="search-bar" id="search-bar">
+        <div class="search-bar">
             <img src="img/svg/magnifying-glass-backup-svgrepo-com.svg" alt="Search Icon">
             <input type="text" placeholder="Product Search" class="input-field">
         </div>
-        <ul class="user-actions" id="user-actions">
+        <ul class="user-actions">
             <li><a href="#"><img src="img/svg/cart-shopping-svgrepo-com.svg" alt="Cart"></a></li>
             <li><a href="#"><img src="img/svg/heart-svgrepo-com.svg" alt="Wishlist"></a></li>
             <li><a href="#"><img src="img/svg/person-svgrepo-com.svg" alt="User"></a></li>
         </ul>
+
+        <!-- Mobile Header -->
+        <div class="header-mobile">
+            <button type="button" class="toggle-btn" onclick="toggleDropdown()" aria-expanded="false"
+                aria-controls="navbar-mobile">
+                <img src="img/svg/nav-icon-svgrepo-com.svg" alt="Navigation Toggle">
+            </button>
+            <div class="mobile-menu" id="mobile-menu">
+                <nav class="navbar" id="navbar-mobile">
+                    <ul class="nav-links">
+                        <li><a href="#category">Category</a></li>
+                        <li><a href="#promo">Promo</a></li>
+                        <li><a href="#interior">Interior Design</a></li>
+                        <li><a href="#recommendation">Product Recommendation</a></li>
+                    </ul>
+                </nav>
+                <div class="search-bar" id="search-bar-mobile">
+                    <img src="img/svg/magnifying-glass-backup-svgrepo-com.svg" alt="Search Icon">
+                    <input type="text" placeholder="Product Search" class="input-field">
+                </div>
+                <ul class="user-actions" id="user-actions-mobile">
+                    <li><a href="#"><img src="img/svg/cart-shopping-svgrepo-com.svg" alt="Cart"></a></li>
+                    <li><a href="#"><img src="img/svg/heart-svgrepo-com.svg" alt="Wishlist"></a></li>
+                    <li><a href="#"><img src="img/svg/person-svgrepo-com.svg" alt="User"></a></li>
+                </ul>
+            </div>
+            <div id="body-overlay" class="overlay" onclick="toggleDropdown()"></div>
+        </div>
+
     </header>
+
+
+
 
 
     <section class="container">
@@ -251,7 +279,7 @@
             </div>
 
             <div class="footer-col">
-                <button class="dropdown-btn">
+                <button type="button" class="dropdown-btn">
                     <h4>Company</h4>
                 </button>
                 <ul class="links">
@@ -263,7 +291,7 @@
             </div>
 
             <div class="footer-col">
-                <button class="dropdown-btn">
+                <button type="button" class="dropdown-btn">
                     <h4>Category</h4>
                 </button>
                 <ul class="links">

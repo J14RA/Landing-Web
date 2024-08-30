@@ -1,17 +1,51 @@
-// JavaScript
 function toggleDropdown() {
-    const navbar = document.getElementById('navbar');
-    const searchBar = document.getElementById('search-bar');
-    const userActions = document.getElementById('user-actions');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const overlay = document.getElementById('body-overlay');
     const toggleBtn = document.querySelector('.toggle-btn');
 
-    const isActive = navbar.classList.toggle('active');
-    searchBar.classList.toggle('active');
-    userActions.classList.toggle('active');
+    // Toggle the 'active' class to show/hide the mobile overlay menu
+    const isActive = mobileMenu.classList.toggle('active');
+    overlay.style.display = isActive ? 'block' : 'none';
 
-    // Update aria-expanded attribute
+    // Update aria-expanded attribute for accessibility
     toggleBtn.setAttribute('aria-expanded', isActive);
+
+    // Add or remove the event listener for clicking outside
+    if (isActive) {
+        document.addEventListener('click', handleClickOutside);
+    } else {
+        document.removeEventListener('click', handleClickOutside);
+    }
 }
+
+function handleClickOutside(event) {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const toggleBtn = document.querySelector('.toggle-btn');
+
+    // Close menu if clicking outside of it and the toggle button
+    if (!mobileMenu.contains(event.target) && !toggleBtn.contains(event.target)) {
+        mobileMenu.classList.remove('active');
+        document.getElementById('body-overlay').style.display = 'none';
+        toggleBtn.setAttribute('aria-expanded', 'false');
+        document.removeEventListener('click', handleClickOutside);
+    }
+}
+
+
+function handleClickOutside(event) {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const toggleBtn = document.querySelector('.toggle-btn');
+
+    // Check if the click is outside the mobile menu and the toggle button
+    if (!mobileMenu.contains(event.target) && !toggleBtn.contains(event.target)) {
+        mobileMenu.classList.remove('active');
+        toggleBtn.setAttribute('aria-expanded', false);
+        // Remove the event listener once the menu is closed
+        document.removeEventListener('click', handleClickOutside);
+    }
+}
+
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
