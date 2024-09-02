@@ -75,7 +75,6 @@ mark {
     background-color: var(--primary-color);
     position: sticky;
     top: 0;
-    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -255,6 +254,10 @@ mark {
 /* Responsive styles */
 @media (max-width: 600px) {
 
+    .header {
+        padding: 1rem;
+    }
+
     .header-desktop .navbar,
     .header-desktop .search-bar,
     .header-desktop .user-actions {
@@ -397,7 +400,6 @@ mark {
     width: 15rem;
     position: relative;
     height: 30rem;
-    /* Set desired height for agent section */
 }
 
 .job-desk {
@@ -501,6 +503,18 @@ mark {
     .home-right {
         padding: 10px;
         width: 100%;
+    }
+
+    .agent {
+        align-self: center;
+        width: 100%;
+        position: relative;
+        height: 30rem;
+    }
+
+    .items-sold {
+        top: 12px;
+        left: 20px;
     }
 
 }
@@ -675,6 +689,24 @@ mark {
 
 .bottom-context a {
     margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+
+    .bottom-section {
+        flex-direction: column;
+        padding: unset;
+    }
+
+    .img-bottom {
+        height: 30rem;
+        width: 100%;
+        margin-right: unset;
+    }
+
+    .bottom-context {
+        padding: 1rem 0;
+    }
 }
 
 /* Colection-section */
